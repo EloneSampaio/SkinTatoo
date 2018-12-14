@@ -1,7 +1,7 @@
 # Desaparecidos
 App "Skintatoo" agendamento de tatuagens
 
-**Procure e gente estudios e faça agendamento para fazer uma tatuagem **
+** Procure e gente estudios e faça agendamento para fazer uma tatuagem **
 
 <h2>App Cliente</h2>
 <p align="center">
@@ -18,7 +18,7 @@ App "Skintatoo" agendamento de tatuagens
     <img width="300" height="500" src="./Prints/Screenshot_20181214-035047_skinTattooStudio.jpg" alt="Menu"/>
     <img width="300" height="500" src="./Prints/Screenshot_20181214-035110_skinTattooStudio.jpg" alt="Cadastro"/>
 </p>
-**Tecnoligias usadas**
+** Tecnoligias usadas **
 <p>Ionic 4</p>
 <p>Angular 6</p>
 <p>CSS 3 </p>
