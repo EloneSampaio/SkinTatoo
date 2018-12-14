@@ -1,0 +1,16 @@
+<!-- <div id="avaliacoes">
+  <ion-icon class="icone" name="star"></ion-icon>
+  <ion-icon class="icone" name="star"></ion-icon>
+  <ion-icon class="icone" name="star"></ion-icon>
+  <ion-icon class="icone" name="star-half"></ion-icon>
+  <ion-icon class="icone" name="star-outline"></ion-icon>
+  <span> 4.0</span>
+</div>  -->
+
+<ion-grid class="ion-rating-container">
+  <ion-row>
+    <ion-col *ngFor="let star of stars">
+      <ion-icon class="icone" [name]="star"></ion-icon>
+    </ion-col>
+  </ion-row>
+</ion-grid>

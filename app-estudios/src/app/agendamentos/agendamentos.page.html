@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar color="dark">
+      <ion-icon slot="start" class="icone" (click)="paginaAnterior()" name="arrow-round-back">
+        Voltar
+      </ion-icon>
+    <ion-title>Agendamentos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list *ngIf="Dados.length > 0">
+
+  <ion-item *ngFor="let dado of Dados">
+    <ion-avatar style="margin-right: 10px; width: 55px; height: 55px;">
+      <img [src]="dado.userImagemPerfil">
+    </ion-avatar>
+    <ion-label>
+        <h2>{{ UserNome }}</h2>
+        <p style="color:black; font-weight:bold">{{ dado.Servico }}, R$ {{ dado.Preco }}</p>
+        <p style="color:black">{{ dado.Data | date: 'EEE, dd MMM y' }} às {{ dado.Hora}}</p> 
+      </ion-label>
+
+      <!-- <ion-button (click)="cancelar(key)" color="danger" slot="end" fill="outline" size="small">
+        <ion-icon name="close"></ion-icon>
+      </ion-button> -->
+  </ion-item>
+
+</ion-list>
+</ion-content>

@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-icon slot="start" class="icone" (click)="paginaAnterior()" name="arrow-round-back">
+      Voltar
+    </ion-icon>
+    <ion-title>Meu cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+      <ion-item>
+        <ion-avatar (click)="takePicture()" class="avatar" slot="start">
+          <ion-icon class="avatar-perfil" *ngIf="ImgPerfil == null" name="image"></ion-icon>
+          <img *ngIf="ImgPerfil != null" [src]="ImgPerfil">
+        </ion-avatar>
+        <ion-label>Imagem do Perfil</ion-label>
+      </ion-item> 
+
+      <ion-item>
+        <ion-label position="stacked">Email Contato</ion-label>
+        <ion-input [(ngModel)]="EmailContato"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="stacked">Nome do estudio</ion-label>
+        <ion-input [(ngModel)]="Nome_Estudio"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="stacked">Endereço</ion-label>
+        <ion-input [(ngModel)]="Endereco"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Telefone</ion-label>
+        <ion-input [(ngModel)]="Telefone"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Atendimento</ion-label>
+        <ion-input [(ngModel)]="Atendimento"></ion-input>
+      </ion-item>  
+      
+      <label for="tatuador">
+          <p>Tatuadores</p>
+      </label>
+       
+           
+         <div class="tatuadores">
+            <ion-avatar (click)="addTatuador()" class="add-tatuador">
+              <ion-icon class="icone-mais" name="add"></ion-icon>
+            </ion-avatar>
+
+            <ion-avatar *ngFor="let tatuador of Tatuadores" (click)="verTatuador(tatuador.key)">
+              <img [src]="tatuador.Foto">
+            </ion-avatar>
+          </div>
+
+      <label for="servicos">
+        <p>Serviços</p>
+      </label>
+
+      <div class="servicos">
+          <ion-avatar (click)="addServico()" class="add-tatuador">
+            <ion-icon class="icone-mais" name="add"></ion-icon>
+          </ion-avatar>
+
+          <ion-item *ngFor="let dados of Servicos" class="itemAtivo" (click)="verServico(dados.key)">  
+            <ion-label>
+              <h2> {{ dados.Nome }} </h2>
+            </ion-label>        
+          </ion-item>
+
+      </div> 
+
+      <label for="galeria">
+        <p>Galeria</p>
+      </label>
+
+        <div class="tatuadores">
+
+          <ion-avatar (click)="addimagem()" class="add-tatuador">
+            <ion-icon class="icone-mais" name="add"></ion-icon>
+          </ion-avatar>
+
+          <ion-avatar *ngFor="let dados of Galeria" (click)="verGaleria(dados.key)">
+            <img [src]="dados.Foto">
+          </ion-avatar>
+
+        </div>
+   
+
+      <ion-button style="margin-top: 20px" (click)="salvar()" color="dark"  expand="block" fill="outline">
+          Salvar
+      </ion-button>
+      
+</ion-content>

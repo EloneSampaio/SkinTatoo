@@ -1,0 +1,38 @@
+#logo{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#img-logo {
+    width: 70%;
+}
+hr {
+    border: none;
+    border-top: 3px double #333;
+    color: #333;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+hr:after {
+    background: #fff;
+    content: 'Logar-se com';
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+}
+
+ion-button.google{
+    --color-selected: #ea4335;
+} 
+
+ion-button.facebook{
+    --color-selected: #4267b2;
+}
+#botoes{
+    margin-top: 70px;
+}
+#botoes .elemento{
+    padding-top: 5px
+}

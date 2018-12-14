@@ -1,0 +1,27 @@
+<ion-content padding>
+ 
+  <ion-list>
+
+    <ion-item *ngFor="let dado of Dados" class="itemAtivo">
+      <ion-label>
+        <h2> <span style="font-weight: bold"> Estudio: </span> {{ dado.NomeEstudio}}</h2>
+        <h2> <span style="font-weight: bold"> Tatoo: </span> {{ dado.NomeServico}}</h2>
+        <h2> <span style="font-weight: bold"> Preço: </span>  R$ {{ dado.Preco}}</h2>
+        <h4>Tamanho</h4>
+        <span>{{dado.Altura}}</span> X <span>{{dado.Largura}}</span>
+      </ion-label>
+
+      <ion-buttons slot="end">
+          <ion-button color="danger" size="small" (click)="excluir(dado.key)">
+              <ion-icon class="icone" name="trash"></ion-icon>
+          </ion-button>
+        <ion-button color="success" size="small" (click)="agendar( dado.NomeServico, dado.Preco, dado.key, dado.EstudioID )">
+            <ion-icon class="icone" name="checkmark"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

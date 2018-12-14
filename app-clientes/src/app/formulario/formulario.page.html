@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="dark">
+
+    <ion-buttons slot="start">
+      <ion-button fill="clear" size="small" (click)="dismiss()">
+        <ion-icon class="icone" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Fazer a solicitação</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-item>
+      <ion-avatar (click)="takePicture()" class="avatar" slot="start">
+        <ion-icon class="avatar-perfil" *ngIf="ImagemCorpo == null" name="body"></ion-icon>
+        <img *ngIf="ImagemCorpo != null" [src]="ImagemCorpo">
+      </ion-avatar>
+      <ion-label>Foto local do corpo</ion-label>
+    </ion-item> 
+
+    <ion-item>
+      <ion-avatar (click)="presentActionSheet1()" class="avatar" slot="start">
+        <ion-icon class="avatar-perfil" *ngIf="ImagemDesenho == null" name="aperture"></ion-icon>
+        <img *ngIf="ImagemDesenho != null" [src]="ImagemDesenho">
+      </ion-avatar>
+      <ion-label>Foto do Desenho</ion-label>
+    </ion-item> 
+
+    <div>
+      <h4 style="margin-left: 13px">Tamanho da tatuagem</h4>
+    </div>
+
+    <ion-item>
+      <div class="box-tamanho">
+          <ion-input [(ngModel)]="altura" min="0" max="3" type="number" placeholder="alt"></ion-input>
+            <span>X</span> 
+          <ion-input [(ngModel)]="largura" min="0" max="3" type="number" placeholder="larg"></ion-input>
+      </div>
+    </ion-item>
+
+    <ion-button expand="block" 
+      color="dark" (click)="solicitar()" style="margin-top: 40px;">
+      Solicitar
+    </ion-button>
+
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="dark">
+      <ion-icon slot="start" class="icone" (click)="paginaAnterior()" name="arrow-round-back">
+        Voltar
+      </ion-icon>
+    <ion-title style="text-align: center;">Detalhes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+
+        <ion-item class="itens">
+          <ion-icon slot="start" name="mail"></ion-icon>
+          <ion-label>{{ Email }}</ion-label>
+          <ion-button (click)="presentAlertEmail()" color="dark" slot="end" fill="outline" size="small">
+              Alterar
+          </ion-button>
+        </ion-item>
+  
+        <ion-item class="itens">
+          <ion-icon slot="start" name="person"></ion-icon>
+          <ion-label>{{ NomeSobrenome }}</ion-label>
+          <ion-button (click)="presentAlertNome()" color="dark" slot="end" fill="outline" size="small">
+              Alterar
+          </ion-button>
+        </ion-item>
+  
+        <ion-item class="itens">
+          <ion-icon slot="start" name="call"></ion-icon>
+          <ion-label>{{ Telefone }}</ion-label>
+          <ion-button (click)="presentAlertTelefone()" color="dark" slot="end" fill="outline" size="small">
+              Alterar
+          </ion-button>
+        </ion-item>
+  
+      </ion-list>    
+</ion-content>

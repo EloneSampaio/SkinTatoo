@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar color="dark">
+  
+      <ion-buttons slot="start">
+          <ion-button fill="clear" size="small" (click)="dismiss()">
+            <ion-icon class="icone" name="close"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+  
+      <ion-buttons slot="end">
+          <ion-button size="small" (click)="salvar()">
+           Salvar
+          </ion-button>
+      </ion-buttons>
+  
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label position="stacked">Nome do Serviço</ion-label>
+    <ion-input [(ngModel)]="NomeServico"></ion-input>
+  </ion-item>
+
+  <ion-button *ngIf="dados != null" color="danger"  expand="block" fill="outline" (click)="excluirServico()">
+    <ion-icon name="trash"></ion-icon>
+    Excluir
+  </ion-button>
+
+</ion-content>

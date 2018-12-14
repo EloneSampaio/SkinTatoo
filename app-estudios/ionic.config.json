@@ -1,0 +1,7 @@
+{
+  "name": "skinTattooStudio",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,31 @@
+//Cabecalho
+#titulo{
+    display: flex;
+    justify-content: center;
+}
+#titulo span{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif
+}
+#titulo #skin{
+    color: #ffffff;   
+}
+#titulo #tattoo{
+    color: #a52240;
+}
+.img-slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+ion-slides {
+    --bullet-background:#000000;
+    --bullet-background-active: #ff0000; 
+}
+#studio-col{
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: initial;
+}

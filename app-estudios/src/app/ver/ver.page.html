@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    
+    <ion-buttons slot="start">
+        <ion-button fill="clear" size="small" (click)="dismiss()">
+          <ion-icon class="icone" name="close"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  
+    <ion-item>
+      <ion-avatar class="avatar" slot="start">
+        <img [src]="Imagem">
+      </ion-avatar>
+      <ion-label>{{ NomePerfil }}</ion-label>
+    </ion-item>
+
+      <h2>{{ NomeServico }}</h2>
+      <span style="font-weight: bold;">Tamanho:</span>
+      <span style="margin: 15px 0px 0px 6px">{{ Largura }}</span> X <span style="margin: 10px 20px 0px 0px">{{ Altura }}</span> 
+      
+      <p style="font-weight: bold;">Local do corpo:</p>
+      <div>
+        <ion-img [src]="ImagemCorpo" alt="Imagem parte do corpo pra tatuar">
+        </ion-img>
+      </div>
+      
+      <p style="font-weight: bold;">Desenho:</p>
+      <div>
+        <ion-img [src]="ImagemDesenho" alt="Imagem parte do corpo pra tatuar">
+        </ion-img>
+      </div>
+
+    <ion-item> 
+      <ion-label>Definir preço</ion-label>
+      <ion-input type="number" [(ngModel)]="Preco" 
+        style="border: 1px solid #000000; height: 35px; width: 10px;"> 
+      </ion-input>         
+    </ion-item>
+
+    <div style=" display: flex; justify-content: center; margin-top: 30px;">
+      <ion-button [disabled]="Preco == null" color="success" size="small" (click)="aceitar()">
+        Enviar
+      </ion-button>
+    </div>
+
+</ion-content>

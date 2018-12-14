@@ -1,0 +1,53 @@
+<ion-content padding>
+
+  <div id="imgPerfil">
+      <img id="img-perfil" [src]="Imagem">
+  </div>
+
+  <div id="basicInfo">
+    <p>{{ Endereco }}</p>
+    <div id="avaliacoes">
+
+      <ion-icon *ngFor="let star of stars; let i = index" 
+        (click)="starClicked(i)" tappable class="icone" [name]="star">
+      </ion-icon>
+      <span> {{ valAva }}</span>
+    </div> 
+  </div>
+
+  <div id="tatuadores-wrapper">
+    <h3>Tatuadores</h3>
+    
+    <div id="tatuadores">
+      <ion-avatar *ngFor="let tatuador of Tatuadores" (click)="verTatuador(tatuador.key)">
+        <img [src]="tatuador.Foto">
+      </ion-avatar>
+    </div>
+
+  </div>
+
+  <div id="Atendimento">
+    <h3> Contato</h3>
+    
+    <label>
+
+      <p>
+        <ion-icon class="icone icones" slot="start" name="call"></ion-icon>
+        {{ Telefone }}
+      </p>
+
+      <p>
+        <ion-icon class="icone icones" slot="start" name="mail"></ion-icon>
+        {{ Email }}
+      </p>
+
+      <p>
+        <ion-icon class="icone icones" slot="start" name="time"></ion-icon>
+        {{ Atendimento }}
+      </p>
+
+    </label>
+    
+  </div>
+
+</ion-content>

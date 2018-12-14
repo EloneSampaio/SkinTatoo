@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "323780544219",
+    "firebase_url": "https://skintattoo-76c36.firebaseio.com",
+    "project_id": "skintattoo-76c36",
+    "storage_bucket": "skintattoo-76c36.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323780544219:android:071110402a948945",
+        "android_client_info": {
+          "package_name": "com.skintatoostudio.tcc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "323780544219-he15gm3l7if3o7p7hf7ob45aqs45dmhe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcVnra2f2KC0m3ijSuV-KnGsLJHNcGGlE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

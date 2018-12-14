@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="dark">
+
+    <ion-icon slot="start" class="icone" (click)="paginaAnterior()" name="arrow-round-back">
+        Voltar
+    </ion-icon>
+
+    <ion-title>Solicitações</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- <div>
+    <p>Nenhuma solicitacão por enquanto</p>
+  </div> -->
+
+  <ion-list>
+
+    <ion-item *ngFor="let dado of Dados" class="itemAtivo" (click)="verDetalhes(dado.usuarioID, dado.key)">
+      <ion-label>
+        <h2>{{ dado.NomeServico}}</h2>
+        <h4>Tamanho</h4>
+        <span>{{dado.Altura}}</span> X <span>{{dado.Largura}}</span>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

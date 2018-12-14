@@ -1,0 +1,26 @@
+
+#titulo{
+    display: flex;
+    justify-content: center;
+}
+#titulo span{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif
+}
+#titulo #skin{
+    color: #ffffff;   
+}
+#titulo #tattoo{
+    color: #a52240;
+}
+
+#reservas{
+    text-align: center;
+    margin-top: 100px;
+}
+#reservas h3{
+    font-size: 18px !important;
+    font-weight: 600;
+    font-family: sans-serif;
+}

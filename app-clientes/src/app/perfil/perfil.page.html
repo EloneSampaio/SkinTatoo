@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="dark" id="cabecalho">
+      <ion-item>
+        <ion-avatar (click)="tirarFoto()" id="avatar" slot="start">
+          <ion-icon color="light" class="eliminarImagem" name="add"> </ion-icon>
+          <ion-icon color="light" class="avatar-perfil" *ngIf="ImagemPerfil == null" name="person"></ion-icon>
+          <img *ngIf="ImagemPerfil != null" [src]="ImagemPerfil">
+        </ion-avatar>
+        <p>{{ NomeSobrenome }}</p>
+      </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+      
+      <!-- <input type='file' (change)="onSelectFile($event)"> -->
+        
+      <ion-item class="itemAtivo" (click)="Detalhes()">
+        <ion-label>Detalhes da conta</ion-label>
+      </ion-item>
+
+      <ion-item class="itemAtivo" (click)="sobreNos()">
+        <ion-label>Sobre nós</ion-label>
+      </ion-item>
+
+      <ion-item class="itemAtivo" (click)="sair()">
+        <ion-label>Sair</ion-label>
+      </ion-item>
+
+    </ion-list>    
+</ion-content>

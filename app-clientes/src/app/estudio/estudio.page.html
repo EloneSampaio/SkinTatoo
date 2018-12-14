@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="dark">
+      <ion-icon slot="start" class="icone" (click)="paginaAnterior()" name="arrow-round-back">
+        Voltar
+      </ion-icon>
+    <ion-title>{{ NomeEstudio }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  
+    <ion-segment (ionChange)="segmentChanged($event)" color="dark">
+      <ion-segment-button value="detalhes" checked>
+        Detalhes
+      </ion-segment-button>
+      
+      <ion-segment-button value="servicos" >
+        Serviços
+      </ion-segment-button>
+    
+      <ion-segment-button value="galeria">
+        Galeria
+      </ion-segment-button>
+    </ion-segment>
+
+
+    <app-detalhe *ngIf="Detalhes"> </app-detalhe>
+
+    <app-servicos *ngIf="Servico"> </app-servicos>
+
+    <app-galeria *ngIf="Galeria"> </app-galeria>
+    
+</ion-content>

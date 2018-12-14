@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-icon slot="start" class="icone" (click)="paginaAnterior()" name="arrow-round-back">
+            Voltar
+          </ion-icon>
+      <ion-title>Cadastrar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+
+    <ion-item>
+      <ion-avatar (click)="presentActionSheet()" class="avatar" slot="start">
+        <ion-icon class="avatar-perfil" *ngIf="ImagemPerfil == null" name="person"></ion-icon>
+        <img *ngIf="ImagemPerfil != null" [src]="ImagemPerfil">
+      </ion-avatar>
+      <ion-label>Imagem do Perfil</ion-label>
+    </ion-item>
+
+    <!-- <input type='file' (change)="onSelectFile($event)">  -->
+    
+    <ion-item>
+      <ion-input type="email" [(ngModel)]="Email" placeholder="Email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="NomeSobrenome" placeholder="Nome e sobre nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="Telefone" placeholder="Telefone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" [(ngModel)]="Senha" placeholder="Senha"></ion-input>
+    </ion-item>
+  
+    <ion-button (click)="cadastar()" color="dark"  expand="block" fill="outline">
+      Cadastrar
+    </ion-button>
+  
+  </ion-content>

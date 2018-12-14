@@ -1,0 +1,41 @@
+#basicInfo, #tatuadores-wrapper, #imgPerfil{
+    border-bottom: 1px solid #000000;
+}
+
+#imgPerfil{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#img-perfil{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#tatuadores{
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+}
+
+#tatuadores ion-avatar{
+    border: 1px solid #000000;
+    margin: 2px;
+}
+
+#basicInfo span{
+    font-size: 20px;
+    position: relative;
+    top: -3px;
+    font-weight: 700;
+}
+#Atendimento{
+    height: 180px;
+    margin-bottom: 30px;
+}
+.icones{
+    position: relative;
+    top: 5px;
+}

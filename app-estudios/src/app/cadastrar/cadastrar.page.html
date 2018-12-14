@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-icon slot="start" class="icone" (click)="paginaAnterior()" name="arrow-round-back">
+          Voltar
+        </ion-icon>
+    <ion-title>cadastrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-input type="email" [(ngModel)]="Email" placeholder="Email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="password" [(ngModel)]="Senha" placeholder="Senha"></ion-input>
+  </ion-item>
+
+  <ion-button style="margin-top: 50px;" (click)="cadastar()" color="dark"  expand="block" fill="outline">
+    Cadastrar
+  </ion-button>
+
+</ion-content>

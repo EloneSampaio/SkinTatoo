@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="dark" id="cabecalho">
+    <ion-searchbar animated debounce="500" (keyup)="onSearchType($event.target.value)" 
+      placeholder="Estudios"> </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <!-- <ion-button href="/estudio" expand="block" color="dark">estudio</ion-button> -->
+
+    <ion-list>
+      <ion-item *ngFor="let item of dados" class="itemAtivo" (click)="verItem(item.key)">
+        <ion-avatar id="avat" slot="start">
+          <img [src]="item.ImagemPerfil">
+        </ion-avatar>
+        <ion-label>
+          <h2>{{item.Nome}}</h2>
+          <p class="endereco">{{item.Detalhes.Endereco}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+</ion-content>

@@ -1,0 +1,39 @@
+#cabecalho{
+    height: 100px;
+}
+
+#cabecalho p{
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+#avatar{
+    width: 80px;
+    height: 80px;
+    border: solid #ffffff 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-perfil{
+    width: 40px;
+    height: 40px
+}
+
+.itemAtivo:hover {
+    background-color: #E8E8E8 !important;
+}
+
+.eliminarImagem{
+    position: absolute;
+    z-index: 12;
+    background-color: #3171e0;
+    border: 1px solid gray;
+    border-radius: 50px;
+    height: 20px;
+    width: 20px;
+    bottom: 10px;
+    left: 74px;
+}

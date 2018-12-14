@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    
+    <ion-buttons slot="start">
+      <ion-button fill="clear" size="small" (click)="dismiss()">
+        <ion-icon class="icone" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Fazer agendamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div id="Agenda">
+    <ion-item>
+      <ion-label>Defina Data:</ion-label>
+      <ion-datetime
+        display-format="DDD, D MMMM YYYY" 
+        month-names="Janeiro, Fevereiro, Mar\u00e7o, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro"
+        month-short-names="Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez"
+        day-names="Domingo, Segunda-Feira, Terça-Feira, Quarta-Feira, Quinta-Feira, Sexta-Feira, Sabado"
+        day-short-names="Dom, Seg, Ter, Quar, Quin, Sex, Sab"
+        cancel-text="Cancelar"
+        done-text="Ok"
+        [(ngModel)]="myDate"
+        min="2018"
+        max="2018-12-31">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Definir Hora:</ion-label>
+        <ion-datetime
+          display-format="HH:mm"
+          cancel-text="Cancelar"
+          done-text="Ok"
+          [(ngModel)]="myHour"
+          hourValues="08,09,10,11,12,13,14,15,16,17,18">
+        </ion-datetime>
+    </ion-item>
+  </div>
+
+  <ion-button expand="block" color="dark" (click)="Agendar()">
+    Confirmar
+  </ion-button>
+
+</ion-content>

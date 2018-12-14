@@ -1,0 +1,7 @@
+{
+  "name": "skinTatoo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

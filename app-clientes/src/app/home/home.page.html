@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <div id="titulo">
+      <span id="skin">SKIN </span>
+      <span id="tattoo">TATTOO</span>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-slides style="height: 200px;" pager="true" [options]="slideOpts">
+      
+      <ion-slide *ngFor="let estudio of Destaque" (click)="verItem(estudio.key)">
+        <img class="img-slide" [src]="estudio.ImagemPerfil">
+      </ion-slide>
+
+    </ion-slides>
+    
+    <div id="studio-col">
+      <ion-chip *ngFor="let estudio of Dados" (click)="verItem(estudio.key)">
+        <ion-avatar>
+          <img [src]="estudio.ImagemPerfil">
+        </ion-avatar>
+        <ion-label>{{ estudio.Nome }}</ion-label>
+      </ion-chip>
+    </div>
+    
+</ion-content>

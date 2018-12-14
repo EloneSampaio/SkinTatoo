@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title style="text-align: center;">MINHAS RESERVAS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  
+  <ion-segment (ionChange)="segmentChanged($event)" color="dark">
+    <ion-segment-button value="agendamentos" checked>
+      Agendamentos
+    </ion-segment-button>
+    
+    <ion-segment-button value="pendencias" >
+      Socilitações recebidas
+    </ion-segment-button>
+  
+  </ion-segment>
+
+
+  <app-agendamento *ngIf="Agendamentos"> </app-agendamento>
+
+  <app-pendencias *ngIf="Pendencias"> </app-pendencias>
+  
+</ion-content>

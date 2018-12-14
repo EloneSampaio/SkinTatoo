@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="dark">
+
+    <ion-buttons slot="start">
+        <ion-button fill="clear" size="small" (click)="dismiss()">
+          <ion-icon class="icone" name="close"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+        <ion-button size="small" (click)="salvar()">
+         Salvar
+        </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<!-- <input type='file' (change)="onSelectFile($event)">  -->
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-avatar (click)="takePicture()" id="avatar" slot="start">
+      <ion-icon class="avatar-perfil" *ngIf="Foto == null" name="person"></ion-icon>
+      <img *ngIf="Foto != null" [src]="Foto">
+    </ion-avatar>
+  </ion-item> 
+
+  <ion-item>
+    <ion-label position="stacked">Nome</ion-label>
+    <ion-input [(ngModel)]="Nome" name="Nome"> </ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="stacked">Descrição</ion-label>
+    <ion-textarea rows="5" cols="20" [(ngModel)]="Descricao" name="Descricao"> </ion-textarea>
+  </ion-item>
+
+  <ion-button *ngIf="dados != null" color="danger"  expand="block" fill="outline" (click)="excluirTatuador()">
+    <ion-icon name="trash"></ion-icon>
+    Excluir
+  </ion-button>
+</ion-content>

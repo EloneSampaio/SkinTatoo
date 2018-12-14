@@ -1,0 +1,26 @@
+<ion-content padding>
+  
+  <!-- <div id="reservas">
+    <h3>Nenhuma reserva feita</h3>
+    <p>Explore e faça a sua primeira reserva</p>
+    <ion-button href="/tabs/(filtro:filtro)" expand="block" color="dark">Vamos</ion-button>
+  </div> -->
+
+  <ion-list>
+
+    <ion-item *ngFor="let dado of dados">
+      <ion-label>
+        <h2>{{ dado.NomeEstudio }}</h2>
+        <p style="color:black">{{ dado.EnderecoEstudio }}</p>
+        <p style="color:black; font-weight:bold">{{ dado.Servico }}, R$ {{ dado.Preco }}</p>
+        <p style="color:black">{{ dado.Data | date: 'EEE, dd MMM y' }} às {{ dado.Hora}}</p> 
+      </ion-label>
+
+      <ion-button (click)="cancelar(dado.key)" color="danger" slot="end" fill="outline" size="small">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
